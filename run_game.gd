@@ -19,6 +19,7 @@ func spawn_tree():
 
 func _on_timer_timeout():
 	spawn_mob()
+	spawn_tree()
 
 func _on_player_health_depleted():
 	$GameOver.visible = true
