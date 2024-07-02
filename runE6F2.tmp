@@ -1,0 +1,470 @@
+[gd_scene load_steps=5 format=3 uid="uid://dtd8er3beknxd"]
+
+[ext_resource type="Script" path="res://run_game.gd" id="1_t4lba"]
+[ext_resource type="PackedScene" uid="uid://gj2uctn0g72a" path="res://player.tscn" id="1_urslr"]
+[ext_resource type="PackedScene" uid="uid://beqvcnvbjeoif" path="res://tree_pine.tscn" id="2_y5mom"]
+
+[sub_resource type="Curve2D" id="Curve2D_m6jai"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -227, -138, 0, 0, 0, 0, 2525, -129, 0, 0, 0, 0, 2521, 542, 0, 0, 0, 0, 2540, 1429, 0, 0, 0, 0, -261, 1440, 0, 0, 0, 0, -231, -141, 0, 0, 0, 0, -220, -141, 0, 0, 0, 0, -223, -157)
+}
+point_count = 8
+
+[node name="Game" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_t4lba")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -10
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+offset_left = -3.0
+offset_top = 3.0
+offset_right = 58.0
+offset_bottom = 58.0
+scale = Vector2(90.0743, 74.5068)
+
+[node name="Player" parent="." instance=ExtResource("1_urslr")]
+position = Vector2(737, 536)
+
+[node name="Path2D" type="Path2D" parent="Player"]
+position = Vector2(-737, -536)
+curve = SubResource("Curve2D_m6jai")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Player/Path2D"]
+unique_name_in_owner = true
+position = Vector2(-227, -138)
+rotation = 0.00327034
+
+[node name="PineTree" parent="." instance=ExtResource("2_y5mom")]
+visible = false
+position = Vector2(876, 907)
+
+[node name="PineTree6" parent="." instance=ExtResource("2_y5mom")]
+visible = false
+position = Vector2(1179, 711)
+
+[node name="PineTree2" parent="." instance=ExtResource("2_y5mom")]
+visible = false
+position = Vector2(334, 795)
+
+[node name="PineTree7" parent="." instance=ExtResource("2_y5mom")]
+visible = false
+position = Vector2(1308, 1312)
+
+[node name="PineTree8" parent="." instance=ExtResource("2_y5mom")]
+visible = false
+position = Vector2(2126, 1233)
+
+[node name="PineTree15" parent="." instance=ExtResource("2_y5mom")]
+visible = false
+position = Vector2(3114, 552)
+
+[node name="PineTree30" parent="." instance=ExtResource("2_y5mom")]
+visible = false
+position = Vector2(3135, 1255)
+
+[node name="PineTree31" parent="." instance=ExtResource("2_y5mom")]
+visible = false
+position = Vector2(3148, 1018)
+
+[node name="PineTree32" parent="." instance=ExtResource("2_y5mom")]
+visible = false
+position = Vector2(3381, 882)
+
+[node name="PineTree33" parent="." instance=ExtResource("2_y5mom")]
+visible = false
+position = Vector2(3246, 1255)
+
+[node name="PineTree34" parent="." instance=ExtResource("2_y5mom")]
+visible = false
+position = Vector2(3237, 1115)
+
+[node name="PineTree35" parent="." instance=ExtResource("2_y5mom")]
+visible = false
+position = Vector2(3288, 984)
+
+[node name="PineTree36" parent="." instance=ExtResource("2_y5mom")]
+visible = false
+position = Vector2(3390, 586)
+
+[node name="PineTree83" parent="." instance=ExtResource("2_y5mom")]
+visible = false
+position = Vector2(3180, 1564)
+
+[node name="PineTree84" parent="." instance=ExtResource("2_y5mom")]
+visible = false
+position = Vector2(2335, 1648)
+
+[node name="PineTree85" parent="." instance=ExtResource("2_y5mom")]
+visible = false
+position = Vector2(3309, 2165)
+
+[node name="PineTree86" parent="." instance=ExtResource("2_y5mom")]
+visible = false
+position = Vector2(4127, 2086)
+
+[node name="PineTree87" parent="." instance=ExtResource("2_y5mom")]
+visible = false
+position = Vector2(5115, 1405)
+
+[node name="PineTree88" parent="." instance=ExtResource("2_y5mom")]
+visible = false
+position = Vector2(5136, 2108)
+
+[node name="PineTree89" parent="." instance=ExtResource("2_y5mom")]
+visible = false
+position = Vector2(5149, 1871)
+
+[node name="PineTree90" parent="." instance=ExtResource("2_y5mom")]
+visible = false
+position = Vector2(5382, 1735)
+
+[node name="PineTree91" parent="." instance=ExtResource("2_y5mom")]
+visible = false
+position = Vector2(5247, 2108)
+
+[node name="PineTree92" parent="." instance=ExtResource("2_y5mom")]
+visible = false
+position = Vector2(5238, 1968)
+
+[node name="PineTree93" parent="." instance=ExtResource("2_y5mom")]
+visible = false
+position = Vector2(5289, 1837)
+
+[node name="PineTree94" parent="." instance=ExtResource("2_y5mom")]
+visible = false
+position = Vector2(5391, 1439)
+
+[node name="PineTree37" parent="." instance=ExtResource("2_y5mom")]
+visible = false
+position = Vector2(3254, 340)
+
+[node name="PineTree69" parent="." instance=ExtResource("2_y5mom")]
+visible = false
+position = Vector2(1292, 2976)
+rotation = -0.0604752
+
+[node name="PineTree70" parent="." instance=ExtResource("2_y5mom")]
+visible = false
+position = Vector2(1595, 2780)
+rotation = -0.0604752
+
+[node name="PineTree71" parent="." instance=ExtResource("2_y5mom")]
+visible = false
+position = Vector2(750, 2864)
+rotation = -0.0604752
+
+[node name="PineTree72" parent="." instance=ExtResource("2_y5mom")]
+visible = false
+position = Vector2(1724, 3381)
+rotation = -0.0604752
+
+[node name="PineTree73" parent="." instance=ExtResource("2_y5mom")]
+visible = false
+position = Vector2(2542, 3302)
+rotation = -0.0604752
+
+[node name="PineTree74" parent="." instance=ExtResource("2_y5mom")]
+visible = false
+position = Vector2(3530, 2621)
+rotation = -0.0604752
+
+[node name="PineTree75" parent="." instance=ExtResource("2_y5mom")]
+visible = false
+position = Vector2(3551, 3324)
+rotation = -0.0604752
+
+[node name="PineTree76" parent="." instance=ExtResource("2_y5mom")]
+visible = false
+position = Vector2(3564, 3087)
+rotation = -0.0604752
+
+[node name="PineTree77" parent="." instance=ExtResource("2_y5mom")]
+visible = false
+position = Vector2(3797, 2951)
+rotation = -0.0604752
+
+[node name="PineTree78" parent="." instance=ExtResource("2_y5mom")]
+visible = false
+position = Vector2(3662, 3324)
+rotation = -0.0604752
+
+[node name="PineTree79" parent="." instance=ExtResource("2_y5mom")]
+visible = false
+position = Vector2(3653, 3184)
+rotation = -0.0604752
+
+[node name="PineTree80" parent="." instance=ExtResource("2_y5mom")]
+visible = false
+position = Vector2(3704, 3053)
+rotation = -0.0604752
+
+[node name="PineTree81" parent="." instance=ExtResource("2_y5mom")]
+visible = false
+position = Vector2(3806, 2655)
+rotation = -0.0604752
+
+[node name="PineTree82" parent="." instance=ExtResource("2_y5mom")]
+visible = false
+position = Vector2(3670, 2409)
+rotation = -0.0604752
+
+[node name="PineTree38" parent="." instance=ExtResource("2_y5mom")]
+visible = false
+position = Vector2(3224, 480)
+
+[node name="PineTree39" parent="." instance=ExtResource("2_y5mom")]
+visible = false
+position = Vector2(3123, 713)
+
+[node name="PineTree47" parent="." instance=ExtResource("2_y5mom")]
+visible = false
+position = Vector2(3542, 925)
+
+[node name="PineTree48" parent="." instance=ExtResource("2_y5mom")]
+visible = false
+position = Vector2(3563, 1628)
+
+[node name="PineTree49" parent="." instance=ExtResource("2_y5mom")]
+visible = false
+position = Vector2(3576, 1391)
+
+[node name="PineTree50" parent="." instance=ExtResource("2_y5mom")]
+visible = false
+position = Vector2(3809, 1255)
+
+[node name="PineTree51" parent="." instance=ExtResource("2_y5mom")]
+visible = false
+position = Vector2(3674, 1628)
+
+[node name="PineTree52" parent="." instance=ExtResource("2_y5mom")]
+visible = false
+position = Vector2(3665, 1488)
+
+[node name="PineTree53" parent="." instance=ExtResource("2_y5mom")]
+visible = false
+position = Vector2(3716, 1357)
+
+[node name="PineTree54" parent="." instance=ExtResource("2_y5mom")]
+visible = false
+position = Vector2(3818, 959)
+
+[node name="PineTree55" parent="." instance=ExtResource("2_y5mom")]
+visible = false
+position = Vector2(3682, 713)
+
+[node name="PineTree56" parent="." instance=ExtResource("2_y5mom")]
+visible = false
+position = Vector2(3652, 853)
+
+[node name="PineTree57" parent="." instance=ExtResource("2_y5mom")]
+visible = false
+position = Vector2(3551, 1086)
+
+[node name="PineTree58" parent="." instance=ExtResource("2_y5mom")]
+visible = false
+position = Vector2(2050, 1616)
+
+[node name="PineTree59" parent="." instance=ExtResource("2_y5mom")]
+visible = false
+position = Vector2(2071, 2319)
+
+[node name="PineTree60" parent="." instance=ExtResource("2_y5mom")]
+visible = false
+position = Vector2(2084, 2082)
+
+[node name="PineTree61" parent="." instance=ExtResource("2_y5mom")]
+visible = false
+position = Vector2(2317, 1946)
+
+[node name="PineTree62" parent="." instance=ExtResource("2_y5mom")]
+visible = false
+position = Vector2(2182, 2319)
+
+[node name="PineTree63" parent="." instance=ExtResource("2_y5mom")]
+visible = false
+position = Vector2(2173, 2179)
+
+[node name="PineTree64" parent="." instance=ExtResource("2_y5mom")]
+visible = false
+position = Vector2(2224, 2048)
+
+[node name="PineTree65" parent="." instance=ExtResource("2_y5mom")]
+visible = false
+position = Vector2(2326, 1650)
+
+[node name="PineTree66" parent="." instance=ExtResource("2_y5mom")]
+visible = false
+position = Vector2(2190, 1404)
+
+[node name="PineTree67" parent="." instance=ExtResource("2_y5mom")]
+visible = false
+position = Vector2(2160, 1544)
+
+[node name="PineTree68" parent="." instance=ExtResource("2_y5mom")]
+visible = false
+position = Vector2(2059, 1777)
+
+[node name="PineTree40" parent="." instance=ExtResource("2_y5mom")]
+visible = false
+position = Vector2(3267, 136)
+
+[node name="PineTree41" parent="." instance=ExtResource("2_y5mom")]
+visible = false
+position = Vector2(3165, 853)
+
+[node name="PineTree42" parent="." instance=ExtResource("2_y5mom")]
+visible = false
+position = Vector2(3280, 747)
+
+[node name="PineTree43" parent="." instance=ExtResource("2_y5mom")]
+visible = false
+position = Vector2(3224, 637)
+
+[node name="PineTree44" parent="." instance=ExtResource("2_y5mom")]
+visible = false
+position = Vector2(3102, 417)
+
+[node name="PineTree45" parent="." instance=ExtResource("2_y5mom")]
+visible = false
+position = Vector2(3093, 298)
+
+[node name="PineTree46" parent="." instance=ExtResource("2_y5mom")]
+visible = false
+position = Vector2(3097, 162)
+
+[node name="PineTree16" parent="." instance=ExtResource("2_y5mom")]
+visible = false
+position = Vector2(2390, 635)
+
+[node name="PineTree17" parent="." instance=ExtResource("2_y5mom")]
+visible = false
+position = Vector2(3993, 1362)
+
+[node name="PineTree18" parent="." instance=ExtResource("2_y5mom")]
+visible = false
+position = Vector2(2183, 1825)
+
+[node name="PineTree19" parent="." instance=ExtResource("2_y5mom")]
+visible = false
+position = Vector2(1570, 1889)
+
+[node name="PineTree20" parent="." instance=ExtResource("2_y5mom")]
+visible = false
+position = Vector2(1306, 3065)
+
+[node name="PineTree21" parent="." instance=ExtResource("2_y5mom")]
+visible = false
+position = Vector2(2603, 3443)
+
+[node name="PineTree22" parent="." instance=ExtResource("2_y5mom")]
+visible = false
+position = Vector2(1841, 2573)
+
+[node name="PineTree23" parent="." instance=ExtResource("2_y5mom")]
+visible = false
+position = Vector2(2632, 870)
+
+[node name="PineTree24" parent="." instance=ExtResource("2_y5mom")]
+visible = false
+position = Vector2(2725, 1590)
+
+[node name="PineTree25" parent="." instance=ExtResource("2_y5mom")]
+visible = false
+position = Vector2(3060, 2032)
+
+[node name="PineTree26" parent="." instance=ExtResource("2_y5mom")]
+visible = false
+position = Vector2(2254, 2445)
+
+[node name="PineTree27" parent="." instance=ExtResource("2_y5mom")]
+visible = false
+position = Vector2(451, 1896)
+
+[node name="PineTree28" parent="." instance=ExtResource("2_y5mom")]
+visible = false
+position = Vector2(3003, 1141)
+
+[node name="PineTree29" parent="." instance=ExtResource("2_y5mom")]
+visible = false
+position = Vector2(1142, 2452)
+
+[node name="PineTree9" parent="." instance=ExtResource("2_y5mom")]
+visible = false
+position = Vector2(1682, 1429)
+
+[node name="PineTree10" parent="." instance=ExtResource("2_y5mom")]
+visible = false
+position = Vector2(1474, 1433)
+
+[node name="PineTree11" parent="." instance=ExtResource("2_y5mom")]
+visible = false
+position = Vector2(950, 1399)
+
+[node name="PineTree12" parent="." instance=ExtResource("2_y5mom")]
+visible = false
+position = Vector2(123, 1263)
+
+[node name="PineTree13" parent="." instance=ExtResource("2_y5mom")]
+visible = false
+position = Vector2(214, 390)
+
+[node name="PineTree14" parent="." instance=ExtResource("2_y5mom")]
+visible = false
+position = Vector2(1233, 912)
+
+[node name="PineTree3" parent="." instance=ExtResource("2_y5mom")]
+visible = false
+position = Vector2(518, 396)
+
+[node name="PineTree4" parent="." instance=ExtResource("2_y5mom")]
+visible = false
+position = Vector2(803, 207)
+
+[node name="PineTree5" parent="." instance=ExtResource("2_y5mom")]
+visible = false
+position = Vector2(795, 788)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.3
+autostart = true
+
+[node name="GameOver" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="GameOver"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -429.0
+offset_top = -162.0
+offset_right = 60.0
+offset_bottom = 77.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.533333)
+
+[node name="Label" type="Label" parent="GameOver/ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 6.5
+offset_top = -101.5
+offset_right = 350.5
+offset_bottom = -18.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 60
+text = "Game Over"
+
+[node name="Timer2" type="Timer" parent="."]
+autostart = true
+
+[connection signal="health_depleted" from="Player" to="." method="_on_player_health_depleted"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer2" to="." method="_on_timer_2_timeout"]
