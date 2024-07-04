@@ -23,7 +23,7 @@ offset_top = 3.0
 offset_right = 58.0
 offset_bottom = 58.0
 scale = Vector2(90.0743, 74.5068)
-color = Color(1, 1, 0.54902, 1)
+color = Color(1, 0.92549, 0.788235, 1)
 
 [node name="Player" parent="." instance=ExtResource("1_urslr")]
 position = Vector2(965, 547)
