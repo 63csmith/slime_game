@@ -5,15 +5,15 @@ extends Node2D
 
 func spawn_mob():
 	var new_mob = preload("res://mob.tscn").instantiate()
-	%PathFollow2D.progress_ratio = randf()
-	new_mob.global_position = %PathFollow2D.global_position
+	$Duck_player/Path2D/PathFollow2D.progress_ratio = randf()
+	new_mob.global_position = $Duck_player/Path2D/PathFollow2D.global_position
 	add_child(new_mob)
 
 
 func spawn_tree():
 	var new_tree = preload("res://tree_pine.tscn").instantiate()
-	%PathFollow2D.progress_ratio = randf()
-	new_tree.global_position = %PathFollow2D.global_position
+	$Duck_player/Path2D/PathFollow2D.progress_ratio = randf()
+	new_tree.global_position = $Duck_player/Path2D/PathFollow2D.global_position
 	add_child(new_tree)
 
 
@@ -23,8 +23,8 @@ func _on_timer_timeout():
 
 func _on_player_health_depleted():
 	$GameOver.visible = true
-	$Player.visible = false
-	$Player/HappyBoo/Gun.queue_free()
+	$Duck_player.visible = false
+	$Duck_player/Ducky/Gun.queue_free()
 	#get_tree().paused = true
 	
 

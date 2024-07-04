@@ -12,15 +12,15 @@ func _physics_process(delta):
 		move_and_slide()
 		
 		if velocity.length() > 0.0:
-			$HappyBoo.play_walk_animation()
+			$Ducky.play_duck_walk_animation()
 		else:
-			$HappyBoo.play_idle_animation()
+			$Ducky.play_duck_idle_animation()
 		
 		const DAMAGE_RATE = 5.0
-		var overlapping_mobs = $HappyBoo/HurtBox.get_overlapping_bodies()
+		var overlapping_mobs = $Ducky/HurtBox.get_overlapping_bodies()
 		if overlapping_mobs.size() > 0:
 			health -= DAMAGE_RATE * overlapping_mobs.size() * delta
-			$HappyBoo/ProgressBar.value = health
+			$Ducky/ProgressBar.value = health
 			if health <= 0.0:
 				health_depleted.emit()
 				can_move = false

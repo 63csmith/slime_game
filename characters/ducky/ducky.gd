@@ -1,9 +1,8 @@
 extends Node2D
 
+func play_duck_idle_animation():
+	$AnimatedSprite.play("idle")
 
-func play_idle_animation():
-	%AnimatedSprite2D.play("idle")
 
-
-func play_walk_animation():
-	%AnimatedSprite2D.play("walk")
+func play_duck_walk_animation():
+	$AnimatedSprite.play("walk")

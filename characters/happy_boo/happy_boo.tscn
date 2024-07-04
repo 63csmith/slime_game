@@ -599,7 +599,7 @@ texture = ExtResource("2_62bos")
 metadata/_edit_lock_ = true
 
 [node name="Colorizer" type="Node2D" parent="."]
-modulate = Color(1, 0.572549, 0.176471, 1)
+modulate = Color(0.319911, 0.744408, 0.969347, 1)
 
 [node name="SquareUpperLegL" type="Sprite2D" parent="Colorizer"]
 position = Vector2(-10.6303, -27.3998)

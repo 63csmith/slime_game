@@ -1,55 +1,48 @@
-[gd_scene load_steps=13 format=3 uid="uid://vadnyt8clvff"]
+[gd_scene load_steps=12 format=3 uid="uid://fnc4rjqy3b3v"]
 
+[ext_resource type="Script" path="res://characters/ducky/ducky.gd" id="1_gute1"]
 [ext_resource type="Texture2D" uid="uid://bxm65rhedfu4q" path="res://characters/ducky/ducky_3_spritesheet.png" id="1_u2a1w"]
 
-[sub_resource type="Animation" id="Animation_m25v5"]
-resource_name = "new_animation"
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_v34r8"]
-_data = {
-"new_animation": SubResource("Animation_m25v5")
-}
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_31xvv"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_y08wd"]
 atlas = ExtResource("1_u2a1w")
 region = Rect2(0, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_kjiw3"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_6737s"]
 atlas = ExtResource("1_u2a1w")
 region = Rect2(32, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_b6ivg"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_lrh8s"]
 atlas = ExtResource("1_u2a1w")
 region = Rect2(0, 32, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_p0131"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_35vjl"]
 atlas = ExtResource("1_u2a1w")
 region = Rect2(32, 32, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ih8m2"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_kbxom"]
 atlas = ExtResource("1_u2a1w")
 region = Rect2(64, 32, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ukjvo"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_acm13"]
 atlas = ExtResource("1_u2a1w")
 region = Rect2(96, 32, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_pfnqa"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_3sqk4"]
 atlas = ExtResource("1_u2a1w")
 region = Rect2(128, 32, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ldoun"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_ck7fr"]
 atlas = ExtResource("1_u2a1w")
 region = Rect2(160, 32, 32, 32)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_2stpp"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_wmodh"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_31xvv")
+"texture": SubResource("AtlasTexture_y08wd")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_kjiw3")
+"texture": SubResource("AtlasTexture_6737s")
 }],
 "loop": true,
 "name": &"idle",
@@ -57,37 +50,37 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_b6ivg")
+"texture": SubResource("AtlasTexture_lrh8s")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_p0131")
+"texture": SubResource("AtlasTexture_35vjl")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ih8m2")
+"texture": SubResource("AtlasTexture_kbxom")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ukjvo")
+"texture": SubResource("AtlasTexture_acm13")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_pfnqa")
+"texture": SubResource("AtlasTexture_3sqk4")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ldoun")
+"texture": SubResource("AtlasTexture_ck7fr")
 }],
 "loop": true,
 "name": &"walk",
-"speed": 10.0
+"speed": 8.0
 }]
 
-[node name="Node2D" type="Node2D"]
+[node name="Ducky" type="Node2D"]
+top_level = true
+texture_filter = 1
+position = Vector2(-3, -1)
+scale = Vector2(5, 5)
+script = ExtResource("1_gute1")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_v34r8")
-}
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, -4)
-sprite_frames = SubResource("SpriteFrames_2stpp")
+[node name="AnimatedSprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(0.6, -3.2)
+sprite_frames = SubResource("SpriteFrames_wmodh")
 animation = &"walk"
-frame_progress = 0.326101
+frame_progress = 0.651895
