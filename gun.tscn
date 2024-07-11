@@ -21,7 +21,7 @@ position = Vector2(0, -1)
 rotation = 0.0747204
 
 [node name="Pistol" type="Sprite2D" parent="Gun Pivot"]
-position = Vector2(159.33, -14.9358)
+position = Vector2(1.07179, 0.922564)
 rotation = -0.0520194
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_ju1qt")

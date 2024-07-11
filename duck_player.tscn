@@ -39,7 +39,22 @@ position = Vector2(0.6, 0.2)
 scale = Vector2(0.2, 0.2)
 
 [node name="Gun" parent="Ducky" instance=ExtResource("3_apu7x")]
-position = Vector2(-0.2, 0)
+position = Vector2(27, -1.6)
+scale = Vector2(0.2, 0.2)
+collision_layer = 2
+
+[node name="Gun2" parent="Ducky" instance=ExtResource("3_apu7x")]
+position = Vector2(-27.8, -0.8)
+scale = Vector2(0.2, 0.2)
+collision_layer = 2
+
+[node name="Gun3" parent="Ducky" instance=ExtResource("3_apu7x")]
+position = Vector2(-0.199999, 24.4)
+scale = Vector2(0.2, 0.2)
+collision_layer = 2
+
+[node name="Gun4" parent="Ducky" instance=ExtResource("3_apu7x")]
+position = Vector2(-0.4, -27.8)
 scale = Vector2(0.2, 0.2)
 collision_layer = 2
 
@@ -51,7 +66,7 @@ collision_layer = 0
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ducky/HurtBox"]
-position = Vector2(-6, 8)
+position = Vector2(-10, 9)
 shape = SubResource("CircleShape2D_srmo7")
 debug_color = Color(0.984628, 0.122069, 9.62615e-07, 0.42)
 
