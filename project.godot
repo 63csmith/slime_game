@@ -77,7 +77,7 @@ Settings/Show_Tooltips=true
 config/name="Slime Run"
 run/main_scene="res://main_menu.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
-config/icon="res://icon.png"
+config/icon="res://pngtree-pixel-duck-illustration-png-image_7266208.png"
 
 [display]
 
