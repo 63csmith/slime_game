@@ -79,7 +79,7 @@ offset_bottom = 616.0
 text = "Quit"
 
 [node name="Duck_player" parent="." instance=ExtResource("4_sucuh")]
-position = Vector2(-100, 55)
+position = Vector2(0, 0)
 
 [node name="Path2D" type="Path2D" parent="Duck_player"]
 position = Vector2(-2, 112)

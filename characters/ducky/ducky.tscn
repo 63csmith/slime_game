@@ -75,12 +75,10 @@ animations = [{
 [node name="Ducky" type="Node2D"]
 top_level = true
 texture_filter = 1
-position = Vector2(-3, -1)
 scale = Vector2(5, 5)
 script = ExtResource("1_ati00")
 
 [node name="AnimatedSprite" type="AnimatedSprite2D" parent="."]
-position = Vector2(0.6, -3.2)
 sprite_frames = SubResource("SpriteFrames_wmodh")
 animation = &"walk"
-frame_progress = 0.651895
+autoplay = "idle"

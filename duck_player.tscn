@@ -34,7 +34,6 @@ shape = SubResource("CircleShape2D_ca0in")
 debug_color = Color(0.858824, 0.34902, 0.290196, 0.752941)
 
 [node name="Ducky" parent="." instance=ExtResource("2_qxocb")]
-z_index = 1
 
 [node name="Camera2D" type="Camera2D" parent="Ducky"]
 position = Vector2(0.6, 0.2)
