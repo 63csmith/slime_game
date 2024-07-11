@@ -5,7 +5,7 @@
 
 [sub_resource type="Curve2D" id="Curve2D_m6jai"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, -227, -138, 0, 0, 0, 0, 2525, -129, 0, 0, 0, 0, 2521, 542, 0, 0, 0, 0, 2540, 1429, 0, 0, 0, 0, -261, 1440, 0, 0, 0, 0, -231, -141, 0, 0, 0, 0, -220, -141, 0, 0, 0, 0, -223, -157)
+"points": PackedVector2Array(0, 0, 0, 0, -783.551, -590.818, 0, 0, 0, 0, 813.909, -604.699, 0, 0, 0, 0, 819.652, 445.065, 0, 0, 0, 0, -196.093, 504.06, 0, 0, 0, 0, -913.186, 491.914, 0, 0, 0, 0, -907.443, -582.142, 0, 0, 0, 0, -775.346, -593.42, 0, 0, 0, 0, -775.346, -593.42)
 }
 point_count = 8
 
@@ -13,32 +13,23 @@ point_count = 8
 y_sort_enabled = true
 script = ExtResource("1_t4lba")
 
-[node name="Duck_player" parent="." instance=ExtResource("4_sucuh")]
-position = Vector2(-1089, -771)
-
-[node name="Path2D" type="Path2D" parent="Duck_player"]
-position = Vector2(8, 82)
-scale = Vector2(1.21881, 1.15264)
-curve = SubResource("Curve2D_m6jai")
-
-[node name="PathFollow2D" type="PathFollow2D" parent="Duck_player/Path2D"]
-unique_name_in_owner = true
-position = Vector2(-227, -138)
-rotation = 0.00327034
-
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = -10
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
-offset_left = -1070.0
-offset_top = -784.0
-offset_right = -1009.0
-offset_bottom = -729.0
+offset_left = -1023.0
+offset_top = -764.0
+offset_right = -962.0
+offset_bottom = -709.0
 scale = Vector2(90.0743, 74.5068)
 color = Color(1, 0.92549, 0.788235, 1)
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.3
+autostart = true
+
+[node name="Timer2" type="Timer" parent="."]
+wait_time = 0.5
 autostart = true
 
 [node name="GameOver" type="CanvasLayer" parent="."]
@@ -87,11 +78,21 @@ offset_right = 997.0
 offset_bottom = 616.0
 text = "Quit"
 
-[node name="Timer2" type="Timer" parent="."]
-wait_time = 0.5
-autostart = true
+[node name="Duck_player" parent="." instance=ExtResource("4_sucuh")]
+position = Vector2(-100, 55)
+
+[node name="Path2D" type="Path2D" parent="Duck_player"]
+position = Vector2(-2, 112)
+scale = Vector2(1.21881, 1.15264)
+curve = SubResource("Curve2D_m6jai")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Duck_player/Path2D"]
+unique_name_in_owner = true
+position = Vector2(-783.551, -590.818)
+rotation = -0.00868919
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer2" to="." method="_on_timer_2_timeout"]
 [connection signal="pressed" from="GameOver/Replay" to="." method="_on_replay_pressed"]
 [connection signal="pressed" from="GameOver/Back_to_Menu" to="." method="_on_back_to_menu_pressed"]
-[connection signal="timeout" from="Timer2" to="." method="_on_timer_2_timeout"]
+[connection signal="health_depleted" from="Duck_player" to="." method="_on_duck_player_health_depleted"]

@@ -1,8 +1,11 @@
 [gd_scene load_steps=8 format=3 uid="uid://c43ddrt5tkf1t"]
 
-[ext_resource type="Script" path="res://player.gd" id="1_6n2xl"]
+[ext_resource type="Script" path="res://duck_player.gd" id="1_f5kkd"]
 [ext_resource type="PackedScene" uid="uid://fnc4rjqy3b3v" path="res://characters/ducky/ducky.tscn" id="2_qxocb"]
 [ext_resource type="PackedScene" uid="uid://b3d110nx2hg33" path="res://gun.tscn" id="3_apu7x"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ca0in"]
+radius = 31.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_srmo7"]
 radius = 37.0
@@ -21,14 +24,17 @@ corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_ca0in"]
-radius = 31.0
-
 [node name="Duck_player" type="CharacterBody2D"]
 position = Vector2(0, -6)
-script = ExtResource("1_6n2xl")
+script = ExtResource("1_f5kkd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-4, 19)
+shape = SubResource("CircleShape2D_ca0in")
+debug_color = Color(0.858824, 0.34902, 0.290196, 0.752941)
 
 [node name="Ducky" parent="." instance=ExtResource("2_qxocb")]
+z_index = 1
 
 [node name="Camera2D" type="Camera2D" parent="Ducky"]
 position = Vector2(0.6, 0.2)
@@ -46,6 +52,7 @@ collision_layer = 0
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ducky/HurtBox"]
+position = Vector2(-6, 8)
 shape = SubResource("CircleShape2D_srmo7")
 debug_color = Color(0.984628, 0.122069, 9.62615e-07, 0.42)
 
@@ -61,8 +68,3 @@ theme_override_styles/background = SubResource("StyleBoxFlat_5c8qy")
 theme_override_styles/fill = SubResource("StyleBoxFlat_qaani")
 value = 100.0
 show_percentage = false
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-2.38419e-07, -5.96046e-08)
-scale = Vector2(1, 1)
-shape = SubResource("CircleShape2D_ca0in")

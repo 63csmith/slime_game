@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://fnc4rjqy3b3v"]
 
-[ext_resource type="Script" path="res://characters/ducky/ducky.gd" id="1_gute1"]
+[ext_resource type="Script" path="res://ducky.gd" id="1_ati00"]
 [ext_resource type="Texture2D" uid="uid://bxm65rhedfu4q" path="res://characters/ducky/ducky_3_spritesheet.png" id="1_u2a1w"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_y08wd"]
@@ -77,7 +77,7 @@ top_level = true
 texture_filter = 1
 position = Vector2(-3, -1)
 scale = Vector2(5, 5)
-script = ExtResource("1_gute1")
+script = ExtResource("1_ati00")
 
 [node name="AnimatedSprite" type="AnimatedSprite2D" parent="."]
 position = Vector2(0.6, -3.2)

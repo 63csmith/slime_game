@@ -21,10 +21,10 @@ func _on_timer_timeout():
 	spawn_mob()
 	#spawn_tree()
 
-func _on_player_health_depleted():
-	$GameOver.visible = true
-	$Duck_player.visible = false
-	$Duck_player/Ducky/Gun.queue_free()
+#func _on_player_health_depleted():
+	#$GameOver.visible = true
+	#$Duck_player.visible = false
+	#$Duck_player/Ducky/Gun.queue_free()
 	#get_tree().paused = true
 	
 
@@ -37,3 +37,9 @@ func _on_replay_pressed():
 func _on_back_to_menu_pressed():
 	get_tree().change_scene_to_file("res://main_menu.tscn")
 
+
+
+func _on_duck_player_health_depleted():
+	$GameOver.visible = true
+	$Duck_player.visible = false
+	$Duck_player/Ducky/Gun.queue_free()
