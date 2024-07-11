@@ -21,7 +21,10 @@ func _physics_process(delta):
 		print("Ducky global position: ", $Ducky.global_position)
 
 		if velocity.length() > 0.0:
-			$Ducky.play_duck_walk_animation()
+			if direction.x < 0:
+				$Ducky.play_duck_walk_left_animation()
+			else:
+				$Ducky.play_duck_walk_animation()
 		else:
 			$Ducky.play_duck_idle_animation()
 		

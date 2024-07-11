@@ -1,7 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://fnc4rjqy3b3v"]
+[gd_scene load_steps=19 format=3 uid="uid://fnc4rjqy3b3v"]
 
 [ext_resource type="Script" path="res://ducky.gd" id="1_ati00"]
 [ext_resource type="Texture2D" uid="uid://bxm65rhedfu4q" path="res://characters/ducky/ducky_3_spritesheet.png" id="1_u2a1w"]
+[ext_resource type="Texture2D" uid="uid://c1m8d1wx2yepj" path="res://characters/ducky/ducky_3_spritesheet_left.png" id="3_mbkl8"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_y08wd"]
 atlas = ExtResource("1_u2a1w")
@@ -34,6 +35,30 @@ region = Rect2(128, 32, 32, 32)
 [sub_resource type="AtlasTexture" id="AtlasTexture_ck7fr"]
 atlas = ExtResource("1_u2a1w")
 region = Rect2(160, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8okpi"]
+atlas = ExtResource("3_mbkl8")
+region = Rect2(160, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q6j4m"]
+atlas = ExtResource("3_mbkl8")
+region = Rect2(128, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xmjso"]
+atlas = ExtResource("3_mbkl8")
+region = Rect2(96, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ixbqy"]
+atlas = ExtResource("3_mbkl8")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7iqns"]
+atlas = ExtResource("3_mbkl8")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vhax1"]
+atlas = ExtResource("3_mbkl8")
+region = Rect2(0, 32, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_wmodh"]
 animations = [{
@@ -70,6 +95,29 @@ animations = [{
 "loop": true,
 "name": &"walk",
 "speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8okpi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q6j4m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xmjso")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ixbqy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7iqns")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vhax1")
+}],
+"loop": true,
+"name": &"walk_left",
+"speed": 8.0
 }]
 
 [node name="Ducky" type="Node2D"]
@@ -82,3 +130,4 @@ script = ExtResource("1_ati00")
 sprite_frames = SubResource("SpriteFrames_wmodh")
 animation = &"walk"
 autoplay = "idle"
+frame_progress = 0.727047
