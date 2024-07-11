@@ -94,7 +94,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"walk",
-"speed": 8.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -117,7 +117,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"walk_left",
-"speed": 8.0
+"speed": 10.0
 }]
 
 [node name="Ducky" type="Node2D"]
@@ -128,6 +128,5 @@ script = ExtResource("1_ati00")
 
 [node name="AnimatedSprite" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_wmodh")
-animation = &"walk"
+animation = &"walk_left"
 autoplay = "idle"
-frame_progress = 0.727047

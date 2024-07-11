@@ -39,8 +39,9 @@ position = Vector2(0.6, 0.2)
 scale = Vector2(0.2, 0.2)
 
 [node name="Gun" parent="Ducky" instance=ExtResource("3_apu7x")]
-position = Vector2(0.4, -4.6)
+position = Vector2(-0.2, 0)
 scale = Vector2(0.2, 0.2)
+collision_layer = 2
 
 [node name="HurtBox" type="Area2D" parent="Ducky"]
 unique_name_in_owner = true
