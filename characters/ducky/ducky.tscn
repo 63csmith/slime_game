@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://fnc4rjqy3b3v"]
+[gd_scene load_steps=21 format=3 uid="uid://fnc4rjqy3b3v"]
 
 [ext_resource type="Script" path="res://ducky.gd" id="1_ati00"]
 [ext_resource type="Texture2D" uid="uid://bxm65rhedfu4q" path="res://characters/ducky/ducky_3_spritesheet.png" id="1_u2a1w"]
@@ -11,6 +11,14 @@ region = Rect2(0, 0, 32, 32)
 [sub_resource type="AtlasTexture" id="AtlasTexture_6737s"]
 atlas = ExtResource("1_u2a1w")
 region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kl4e8"]
+atlas = ExtResource("3_mbkl8")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2u286"]
+atlas = ExtResource("3_mbkl8")
+region = Rect2(128, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lrh8s"]
 atlas = ExtResource("1_u2a1w")
@@ -75,6 +83,17 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_kl4e8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2u286")
+}],
+"loop": true,
+"name": &"idle_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_lrh8s")
 }, {
 "duration": 1.0,
@@ -128,5 +147,4 @@ script = ExtResource("1_ati00")
 
 [node name="AnimatedSprite" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_wmodh")
-animation = &"walk_left"
-autoplay = "idle"
+animation = &"idle_left"

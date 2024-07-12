@@ -1,6 +1,7 @@
 extends Node2D
 
-
+func _ready():
+	randomize()
 
 
 func spawn_mob():
@@ -20,17 +21,12 @@ func spawn_tree():
 func _on_timer_timeout():
 	spawn_mob()
 	spawn_mob()
-	spawn_tree()
+	#spawn_tree()
 
-#func _on_player_health_depleted():
-	#$GameOver.visible = true
-	#$Duck_player.visible = false
-	#$Duck_player/Ducky/Gun.queue_free()
-	#get_tree().paused = true
-	
 
 #func _on_timer_2_timeout():
-	#spawn_tree()
+	#var random_color = Color(randf(), randf(), randf())
+	#$CanvasLayer/ColorRect.set_color(random_color)
 
 func _on_replay_pressed():
 	get_tree().change_scene_to_file("res://run_game.tscn")

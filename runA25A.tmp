@@ -22,7 +22,7 @@ offset_top = -764.0
 offset_right = -962.0
 offset_bottom = -709.0
 scale = Vector2(90.0743, 74.5068)
-color = Color(0.0891522, 0.455555, 0.732487, 0.870588)
+color = Color(0.551491, 0.511193, 0.195218, 0.870588)
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.3

@@ -4,6 +4,7 @@ signal health_depleted
 
 var health = 100.0
 var can_move = true
+var last_direction = Vector2.ZERO
 
 func _ready():
 	print("Initial Duck_player global position: ", global_position)
@@ -21,12 +22,16 @@ func _physics_process(delta):
 		print("Ducky global position: ", $Ducky.global_position)
 
 		if velocity.length() > 0.0:
+			last_direction = direction
 			if direction.x < 0:
 				$Ducky.play_duck_walk_left_animation()
 			else:
 				$Ducky.play_duck_walk_animation()
 		else:
-			$Ducky.play_duck_idle_animation()
+			if last_direction.x < 0:
+				$Ducky.play_duck_idle_left_animation()
+			else:
+				$Ducky.play_duck_idle_animation()
 		
 		const DAMAGE_RATE = 5.0
 		var overlapping_mobs = $Ducky/HurtBox.get_overlapping_bodies()
@@ -42,3 +47,4 @@ func _physics_process(delta):
 	
 	# Manually update Ducky's position to follow Duck_player
 	$Ducky.position = position
+
