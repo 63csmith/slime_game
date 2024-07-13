@@ -21,14 +21,14 @@ position = Vector2(0, -1)
 rotation = 0.0747204
 
 [node name="Pistol" type="Sprite2D" parent="Gun Pivot"]
-position = Vector2(23.1598, 1.27466)
-rotation = -0.0872665
-scale = Vector2(0.2, 0.2)
+position = Vector2(62.7763, -18.7386)
+rotation = -0.122173
+scale = Vector2(0.1, 0.1)
 texture = ExtResource("2_nshlo")
 
 [node name="ShootingPoint" type="Marker2D" parent="Gun Pivot/Pistol"]
 unique_name_in_owner = true
-position = Vector2(741.553, -86.8549)
+position = Vector2(1202, 197.239)
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.1
