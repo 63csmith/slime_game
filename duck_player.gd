@@ -17,9 +17,9 @@ func _physics_process(delta):
 		velocity = direction * 600
 		move_and_slide()
 
-		print("Duck_player position: ", position)
-		print("Duck_player global position: ", global_position)
-		print("Ducky global position: ", $Ducky.global_position)
+		#print("Duck_player position: ", position)
+		#print("Duck_player global position: ", global_position)
+		#print("Ducky global position: ", $Ducky.global_position)
 
 		if velocity.length() > 0.0:
 			last_direction = direction
