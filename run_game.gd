@@ -24,9 +24,9 @@ func _on_timer_timeout():
 	#spawn_tree()
 
 
-#func _on_timer_2_timeout():
-	#var random_color = Color(randf(), randf(), randf())
-	#$CanvasLayer/ColorRect.set_color(random_color)
+func _on_timer_2_timeout():
+	var random_color = Color(randf(), randf(), randf())
+	$CanvasLayer/ColorRect.set_color(random_color)
 
 func _on_replay_pressed():
 	get_tree().change_scene_to_file("res://run_game.tscn")

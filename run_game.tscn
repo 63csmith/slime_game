@@ -25,7 +25,7 @@ scale = Vector2(90.0743, 74.5068)
 color = Color(0.0891522, 0.455555, 0.732487, 0.870588)
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 0.3
+wait_time = 0.2
 autostart = true
 
 [node name="Timer2" type="Timer" parent="."]
